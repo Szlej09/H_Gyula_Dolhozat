@@ -32,7 +32,4 @@ class Oscar
         $dbvez->closeDB();
         return $this->oscars;
     }
-
-
-
 }

@@ -38,10 +38,4 @@ class DBController
     {
         $this->conn=null;
     }
-
-
-
-
-
-
 }
