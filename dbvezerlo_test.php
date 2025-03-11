@@ -1,24 +1,29 @@
 <?php
-include("dbvezerlo.php");
-class dbcontTest
+include("dbvezerlopdo.php");
+class DBContTest
 {
     public function teszt()
     {
-        echo "teszt indytása!";
+        echo "teszt indítása!";
+        echo "<br>";
         $db=new DBController();
         if ($db->connectDB()) 
         {
-            echo "Sikeres csatl...";
+            echo "Sikeres csatl...\n";
+            echo "<br>";
         }
         else{
-            echo "Sikertelen catl...";
+            echo "Sikertelen csatl...\n";
+            echo "<br>";
         }
-        if ($db->executeSelectQuery("SELECT * FROM movie")) 
+        if ($db->executeSelectQuery("SELECT * FROM movie",$params=[])) 
         {
-            echo "Sikeres lekerd...";
+            echo "Sikeres lekerd...\n";
+            echo "<br>";
         }
         else{
             echo "Sikertelen lekerd...";
+            echo "<br>";
         }
         $db->closeDB();
     }
@@ -32,6 +37,6 @@ class dbcontTest
     <title>Document</title>
 </head>
 <body>
-    <div><?php $teszt=new dbcontTest();$teszt->teszt();?></div>
+    <div><?php $teszt=new DBContTest();$teszt->teszt();?></div>
 </body>
 </html>
