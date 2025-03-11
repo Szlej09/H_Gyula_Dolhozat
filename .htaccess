@@ -1,0 +1,9 @@
+Options +FollowSymlinks
+RewriteEngine Options
+
+
+
+RewriteRule ^movie/list/$ index.php?biew=all [nc,qsa]
+RewriteRule ^movie/list/([0-9]+)$ index.php?view=single$id=$1 [nc,qsa]
+RewriteRule ^movie/type/([a-zA-ZáéűúóüöőíÁÉÚŐŰÓÜÖÍ]+)/$ index.php?view=tipus$tid=$1 [nc,qsa]
+RewriteRule ^movie/.*$ index.php [nc,qsa]
