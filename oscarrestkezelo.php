@@ -82,9 +82,4 @@ class Oscarrestkezelo extends Restkezelo
     {
         file_put_contents($file_path,$responseData);
     }
-
-
-
-
-
 }
